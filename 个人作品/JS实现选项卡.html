@@ -74,15 +74,14 @@
             ul1_li[i].index = i;
             //建立每个li标签的鼠标经过事件
             ul1_li[i].onmouseover = function(){
-                //循环遍历初始化每个li标签
+                //当鼠标移动到某个标题前时先遍历每个标题取消每个标题的样式以及每个内容框的样式
                 for(var i=0; i<ul1_li.length; i++){
-                    ul1_li[i].className="";
-                }
-                this.className="active";
-                for(var i=0; i<div.length; i++){
+                    ul1_li[i].className = "";
                     div[i].className = "hide";
                 }
-                //通过索引牵线每个标签对应的内容
+                //然后给鼠标当前所在标题添加样式
+                this.className = "active";
+                //通过索引牵线对对应的内容框添加样式
                 div[this.index].className="show";
             }
         }
