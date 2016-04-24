@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>无缝滚动文字</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		a{
+			text-decoration: none;
+			color: #333;
+		}
+		a:hover{
+			color: #ff0000;
+		}
+		ul{
+			list-style-type: none;
+		}
+		#div1{
+			position: relative;
+			margin: 20px auto;
+			width: 400px;
+			height: 270px;
+			border:3px solid #ccc;
+			border-radius: 10px;
+			font-size: 14px;
+			font-family: "微软雅黑";
+			box-shadow: 0 0 4px 1px #666;
+		}
+		#div1 .title{
+			background-color: red;
+			color: #fff	;
+			height: 60px;
+			line-height: 60px;
+			border-top-left-radius: 7px;
+			border-top-right-radius: 7px;
+			text-indent: 25px;
+			letter-spacing: 2px;
+			font-size: 23px;
+			position: relative;
+		}
+		.title a{
+			position: absolute;
+			font-size: 13px;
+			right: 5px;
+			top: 15px;
+			color: #fff;
+			display: inline;
+		}
+		#area{
+			width: 340px;
+			height: 195px;
+			margin: 0px auto;
+			margin-top: 10px;
+			overflow: hidden;
+			/*border:1px solid #000;*/
+		}
+		#div1 ul li{
+			height: 30px;
+		}
+		#div1 ul li a{
+			width: 220px;
+			float: left;
+			display: block;
+			overflow: hidden;
+			text-indent: 15px;
+			height: 30px;
+		}
+		#div1 ul li span{
+			float: right;
+			color: #888;
+			font-size: 12px;
+			right: 30px;
+		}
+		ul{
+	border:1px solid blue;
+}
+	</style>
+	
+
+	
+</head>
+<body>
+	<div id="div1">
+		<h3 class="title">慕课网最新课程<a>更多>></a></h3>
+		
+		<div id="area">
+			<ul id="txt1">
+				<li><a href="#">1.学会html5绝对的屌丝逆袭</a><span>2013-04-11</span></li>
+				<li><a href="#">2.tab页面切换</a><span>2013-04-11</span></li>
+				<li><a href="#">3.圆角水晶按钮制作</a><span>2013-04-11</span></li>
+				<li><a href="#">4.HTML+CSS基础课程（系列）</a><span>2013-04-11</span></li>
+				<li><a href="#">5.分页页码制作（案例）</a><span>2013-04-11</span></li>
+				<li><a href="#">6.导航条菜单的制作（案例）</a><span>2013-04-11</span></li>
+				<li><a href="#">7.信息列表制作（案例）</a><span>2013-04-11</span></li>
+				<li><a href="#">8.下拉菜单制作（案例）</a><span>2013-04-11</span></li>
+				<li><a href="#">9.如何实现新手引导效果</a><span>2013-04-11</span></li>
+			</ul>
+			<ul id="txt2"></ul>
+		</div>
+	</div>
+
+
+	<script type="text/javascript">
+		var area = document.getElementById("area");
+		var txt1 = document.getElementById("txt1");
+		var txt2 = document.getElementById("txt2");
+		txt2.innerHTML = txt1.innerHTML;
+		var speed = 50; //定义滚动速度
+		function scrollUp(){
+			//判断，如果卷曲高度刚好等于txt1的内容高度则让卷曲高度变为0，否则继续滚动
+			if(area.scrollTop == txt1.offsetHeight){
+				area.scrollTop = 0;	
+			}else{
+				area.scrollTop++;
+			}
+		}
+		//初始让它滚动
+		var timer = setInterval(scrollUp, speed);
+		//当鼠标移入时停止（清除定时器）
+		area.onmouseover = function(){
+			clearInterval(timer);
+		}
+		//当鼠标移开时则继续滚动
+		area.onmouseout = function(){
+			timer = setInterval(scrollUp, speed);
+		}
+	</script>
+</body>
+</html>
