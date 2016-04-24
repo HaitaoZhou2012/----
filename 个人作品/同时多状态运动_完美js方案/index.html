@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"> 
+	<title>js动画</title>
+	<script type="text/javascript" src="js/action.js"></script>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding:0;
+		}
+		ul{
+			margin-top: 30px;
+			list-style: none;
+		}
+		ul li{
+			width: 200px;
+			height: 50px;
+			background-color: red;
+			margin-bottom: 20px;
+			border:2px solid #000;
+			filter:alpha(opacity:30);
+			opacity: 0.3;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload = function(){
+			var lis = document.getElementsByTagName("li");
+			var li = document.getElementById("li");
+			/*li.onmouseover = function(){
+				startAct(li,{height:53, width:400,opacity:100});
+			}
+			li.onmouseout = function(){
+				startAct(li,{height:50, width:200,opacity:30});
+			}*/
+			for(var i=0; i<lis.length; i++){
+				//宽度/高度变化
+				lis[i].onmouseover = function(){
+					var _this = this;//用_this指代每次遍历后的对象
+					startAct(_this,{height:100, opacity:100},function(){
+						startAct(_this,{width:400});
+					});
+				}
+				lis[i].onmouseout = function(){
+					var _this = this;//用_this指代每次遍历后的对象
+					startAct(_this,{height:50, opacity:30},function(){
+						startAct(_this,{width:200});
+					});
+				}
+			}
+
+		}
+
+	</script>
+</head>
+<body>
+	<ul>
+		<li id="li"></li>
+		<li></li>
+		<li></li>
+	</ul>	
+</body>
+</html>
