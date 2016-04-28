@@ -119,3 +119,58 @@ button{
 .green-section .icon-group{
 	margin: 60px;
 }
+
+.gray-section{
+	
+	color: #fff;
+}
+
+.gray-section{
+	background-color: #282B33;
+}
+
+.gray-section .img-section{
+	width: 45%;
+}
+
+.img-section img{
+	width: 100%;
+}
+
+.gray-section .text-section{
+	width: 55%;
+}
+
+.text-section h2{
+	margin:50px 40px;
+	margin-bottom: 20px;
+}
+
+.text-section .sub-heading{
+	margin: 20px 40px;
+}
+
+.text-section p{
+	margin: 20px 60px;
+	font-size: 18px;
+	letter-spacing: 1px;
+}
+/*使用奇偶选择器区分内容块*/
+.article-preview:nth-child(odd){
+	background-color: rgba(255,255,255,0.05);
+}
+
+.article-preview > div{
+	float: left;
+}
+
+.article-preview:after{ /*清除浮动*/
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.img-section{
+	font-size: 0;/*清除容器之间的空隙*/
+}
+
