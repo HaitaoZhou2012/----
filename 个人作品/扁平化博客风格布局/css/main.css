@@ -1,41 +1,84 @@
-
 *{
 	margin:0;
 	padding:0;
 	font-family: "微软雅黑";
 }
-
-nav{
-	background-color: #333;
-	height: 50px;
+ul{
+	list-style: none;
+	margin: 0;
 }
+a{
+	text-decoration: none;
+}
+
+header{/*把header部分背景图片模糊*/
+	background-color: rgba(0,0,0,0.3);
+}
+
 #banner{
-	background-color: #777;
+	background-color: transparent;
 	height: 700px;
 }
 
-nav ul{
-	list-style: none;
-	margin: 0;
-	float: right;
+nav{
+	/*
+	background-color: #444;
+	display:none;
+	*/
+	background-color: transparent;
+	height: 50px;
 }
-
-nav ul li, nav .logo{
-	display: inline-block;
+nav .logo{/*当移动到第二个板块时显示导航栏*/
+	display: none;
+	/*display: inline-block;*/
 	line-height: 50px;
 	margin-right: 20px;
 }
-
-nav ul li a{
+nav .menu{
+	margin: 0;
+	position: fixed;
+	top: 0px;
+	right: 20px;
 	line-height: 50px;
-	text-decoration: none;
-	display: inline-block;
-	height: inherit;
+	color: #fff;
+	cursor: pointer;
+}
+
+.menu-content{
+	display: none;
+	position: fixed;
+	background-color: #00D4AD;
+	right: 0;
+	top: 0;
+	width: 230px;
+	height: 2000px;
+	text-align: left;
+	overflow: hidden;
+	padding: 30px;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+}
+.menu-content ul li{
+	line-height: 50px;
+	height: 50px;
+	border-bottom: 1px solid #008875;
+}
+.menu-content ul li:hover{
+	background-color: rgba(0,0,0,0.04);
+}
+.menu-content ul li:last-child{
+	border-bottom: none;	
+}
+.menu-content ul li a{
 	color: #fff;
 }
-
-nav ul li.logo{
+.menu-content .remove{
+	color: #fff;
+	float: right;
+	cursor: pointer;
 }
+
 
 #banner .inner{
 	max-width: 300px;
@@ -69,7 +112,7 @@ button{
 }
 
 #banner .inner .more{
-	margin-top: 280px;
+	margin-top: 230px;
 	color: #fff;
 }
 
@@ -95,7 +138,7 @@ button{
 	line-height: 50px;
 }
 .wrapper{
-	max-width: 1080px;
+	max-width: 980px;
 	margin: 0 auto;
 }
 
@@ -164,7 +207,8 @@ button{
 	float: left;
 }
 
-.article-preview:after{ /*清除浮动*/
+/*自定义一个清除浮动的类*/
+.clearFloat:after{ /*清除浮动*/
 	content: "";
 	display: block;
 	clear: both;
@@ -174,3 +218,95 @@ button{
 	font-size: 0;/*清除容器之间的空隙*/
 }
 
+.purple-section{
+	background-color: #262149;
+	color: #fff;
+	font-size: 18px;
+	padding: 80px;
+}
+
+.purple-section .heading-wrapper{
+	text-align: center;
+}
+
+.heading-wrapper .hr{
+	background-color: #130E35;
+	height: 2px;
+	width: 60%;
+	margin: 20px auto;
+}
+
+.card{
+	float: left;
+	width: 50%;
+	min-height: 300px;
+	padding: 50px;
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	/*border:1px solid #fff;*/
+}
+h3{
+	font-size: 24px;
+}
+.card p{
+	margin-top: 20px;
+}
+
+/*为卡片添加渐变色*/
+.card:nth-child(1){
+	background-color: rgba(0,0,0,0.04);
+}
+.card:nth-child(2){
+	background-color: rgba(0,0,0,0.08);
+}
+.card:nth-child(3){
+	background-color: rgba(0,0,0,0.12);
+}
+.card:nth-child(4){
+	background-color: rgba(0,0,0,0.16);
+}
+.card:nth-child(5){
+	background-color: rgba(0,0,0,0.20);
+}
+.card:nth-child(6){
+	background-color: rgba(0,0,0,0.24);
+}
+
+
+.window{
+	width: 100%;
+	height: 500px;
+}
+/*页脚*/
+footer{
+	background-color: #333;
+	color: #fff;
+	min-height: 200px;
+	text-align: center;
+}
+
+ul.share-group{
+	display: block;
+	width: 980px;
+	margin: 0 auto;
+	padding: 50px;
+}
+
+.share-group li{
+	display: inline-block;
+	padding: 10px;
+}
+
+.copy{
+	padding: 20px;
+}
+
+.main-wrapper{
+	background-color: #444;
+	background-image: url(../img/banner.jpg); 
+	background-attachment: fixed;/*固定背景图片，不让它动*/
+	background-repeat: no-repeat;/*指定不让图片重复*/
+	background-size: cover;/*以封面大小确定图片大小*/
+	background-position: center center;/*背景位置，xy轴居中*/
+}
