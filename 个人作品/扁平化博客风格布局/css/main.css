@@ -1,0 +1,121 @@
+
+*{
+	margin:0;
+	padding:0;
+	font-family: "微软雅黑";
+}
+
+nav{
+	background-color: #333;
+	height: 50px;
+}
+#banner{
+	background-color: #777;
+	height: 700px;
+}
+
+nav ul{
+	list-style: none;
+	margin: 0;
+	float: right;
+}
+
+nav ul li, nav .logo{
+	display: inline-block;
+	line-height: 50px;
+	margin-right: 20px;
+}
+
+nav ul li a{
+	line-height: 50px;
+	text-decoration: none;
+	display: inline-block;
+	height: inherit;
+	color: #fff;
+}
+
+nav ul li.logo{
+}
+
+#banner .inner{
+	max-width: 300px;
+	text-align: center;
+	margin: 0 auto;
+	position: relative;
+	top: 160px;
+}
+
+#banner .inner h1{
+	/*width: 190px;*/
+	border-top: 2px solid #fff;
+	border-bottom: 2px solid #fff;
+	line-height: 60px;
+	margin:0 auto;
+	color: #fff;
+}
+.sub-heading{
+	margin: 20px;
+	line-height: 20px;
+	color: #fff;
+}
+button{
+	border:none;
+	background-color: #07B7C0;
+	color: #eee;
+	padding:10px;
+}
+#banner .inner button{
+	padding:14px 40px;
+}
+
+#banner .inner .more{
+	margin-top: 280px;
+	color: #fff;
+}
+
+.logo{
+	font-size: 20px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	text-indent: 15px;
+}
+.logo a{
+	color: #fff;
+	text-decoration: none;
+}
+
+.green-section{
+	text-align: center;
+	background-color: #07B7C0;
+	color: #fff;
+	padding: 100px 0;
+	font-size: 18px;
+}
+.green-section p{
+	line-height: 50px;
+}
+.wrapper{
+	max-width: 1080px;
+	margin: 0 auto;
+}
+
+.green-section .hr{
+	width: 70%;
+	height: 2px;
+	margin: 20px auto;
+	background-color: #0396AE;
+}
+
+.green-section .icon-group .icon{
+	display: inline-block;
+	width: 80px;
+	height: 80px;
+	background-color: #038EAE;
+	/*控制小图标形变*/
+	transform: rotate(45deg);/*rotate指旋转，旋转45度*/
+	margin:25px;
+}
+
+.green-section .icon-group{
+	margin: 60px;
+}
