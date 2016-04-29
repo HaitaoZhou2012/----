@@ -2,21 +2,34 @@
 <html>
 <head>
 	<meta charset="UTF-8">
+
 	<title>扁平化博客风格设计</title>
+
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="Font-Awesome-3.2.1/css/font-awesome.min.css">
+	<script type="text/javascript" src="js/script.js"></script>
 	
 </head>
 <body>
+
+<div class="main-wrapper"><!-- 和body一样的作用，添加背景图片 -->
+
 	<header><!-- 页头 -->
 		<nav><!-- 导航栏 -->
 			<div class="logo"><a href="#">张小窝</a></div>
-			<ul>
-				<li class="active"><a href="#">首页</a></li>
-				<li><a href="#">链接1</a></li>
-				<li><a href="#">链接1</a></li>
-				<li><a href="#">链接1</a></li>
-			</ul>
+			<div class="menu" id="menu">MENU <i class="icon-align-justify icon-1x"></i></div>
+
+			<div class="menu-content" id="menu-content">
+				<i class="icon-remove remove" id="remove"></i>
+				<ul>
+					<li class="active"><a href="#">首页</a></li>
+					<li><a href="#1">关于我</a></li>
+					<li><a href="#2">联系我</a></li>
+					<li><a href="#3">友链</a></li>
+				</ul>
+			</div>
+
 		</nav>
 		<div id="banner"><!-- 中间部分 -->
 			<div class="inner">
@@ -26,7 +39,9 @@
 				</p>
 				<button>养我</button>
 				<div class="more">
-					更多
+					更多<br>
+					<!-- 引用Font-Awesome-3.2.1中的图标 -->
+					<i class="icon-double-angle-down icon-3x"></i>
 				</div>
 			</div>
 		</div>
@@ -50,8 +65,9 @@
 			</div>
 		</section>
 
+
 		<section class="gray-section">
-			<div class="article-preview">
+			<div class="article-preview clearFloat"><!-- 需要额外清除浮动 -->
 				<div class="img-section">
 					<img src="img/pic01.jpg">
 				</div>
@@ -63,9 +79,8 @@
 					</p>
 				</div>
 			</div>
-		</section>
-		<section class="gray-section">
-			<div class="article-preview">
+
+			<div class="article-preview clearFloat"><!-- 需要额外清除浮动 -->
 				<div class="text-section">
 					<h2>有一个标题</h2>
 					<div class="sub-heading">我是个副标题你好</div>
@@ -77,9 +92,8 @@
 					<img src="img/pic02.jpg">
 				</div>
 			</div>
-		</section>
-		<section class="gray-section">
-			<div class="article-preview">
+		
+			<div class="article-preview clearFloat"><!-- 需要额外清除浮动 -->
 				<div class="img-section">
 					<img src="img/pic03.jpg">
 				</div>
@@ -93,12 +107,77 @@
 			</div>
 		</section>
 
-		<section class="purple-section"></section>
+		<section class="purple-section"><!-- 最后一段内容 -->
+			<div class="wrapper clearFloat"><!-- 需要额外清除浮动 -->
+				<div class="heading-wrapper">
+					<h2>又一个标题</h2>
+					<div class="hr"></div>
+					<div class="sub-heading">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto at quasi, tenetur? Soluta veniam perferendis dolorem commodi nemo, delectus animilibero, reiciendis numquam consequuntur, voluptatem recusandae dolorum asperiores accusantium iusto!
+					</div>
+				</div>
+				<div class="card-group"><!-- 六个卡片，卡片组 -->
+					<div class="card">
+						<h3>标题三</h3>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto at quasi, tenetur? Soluta veniam perferendis dolorem commodi nemo, delectus animilibero, reiciendis numquam consequuntur, voluptatem recusandae dolorum asperiores accusantium iusto!
+						</p>
+					</div>
+					<div class="card">
+						<h3>标题三</h3>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto at quasi, tenetur? Soluta veniam perferendis dolorem commodi nemo, delectus animilibero, reiciendis numquam consequuntur, voluptatem recusandae dolorum asperiores accusantium iusto!
+						</p>
+					</div>
+					<div class="card">
+						<h3>标题三</h3>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto at quasi, tenetur? Soluta veniam perferendis dolorem commodi nemo, delectus animilibero, reiciendis numquam consequuntur, voluptatem recusandae dolorum asperiores accusantium iusto!
+						</p>
+					</div>
+					<div class="card">
+						<h3>标题三</h3>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto at quasi, tenetur? Soluta veniam perferendis dolorem commodi nemo, delectus animilibero, reiciendis numquam consequuntur, voluptatem recusandae dolorum asperiores accusantium iusto!
+						</p>
+					</div>
+					<div class="card">
+						<h3>标题三</h3>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto at quasi, tenetur? Soluta veniam perferendis dolorem commodi nemo, delectus animilibero, reiciendis numquam consequuntur, voluptatem recusandae dolorum asperiores accusantium iusto!
+						</p>
+					</div>
+					<div class="card">
+						<h3>标题三</h3>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto at quasi, tenetur? Soluta veniam perferendis dolorem commodi nemo, delectus animilibero, reiciendis numquam consequuntur, voluptatem recusandae dolorum asperiores accusantium iusto!
+						</p>
+					</div>
+
+				</div>
+			</div>
+			
+		</section>
 	</div>
 	
-	<footer><!-- 页脚 -->
+	<div class="window">
+		
+	</div>
 
+	<footer><!-- 页脚 -->
+		<ul class="share-group">
+			<li>item1</li>
+			<li>item2</li>
+			<li>item3</li>
+			<li>item4</li>
+			<li>item5</li>
+		</ul>
+		<div class="copy">
+			&copy 王小窝 - 2016
+		</div>
 	</footer>
+
+</div>
 </body>
 </html>
 

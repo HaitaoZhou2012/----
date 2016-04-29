@@ -45,10 +45,9 @@ nav .menu{
 }
 
 .menu-content{
-	display: none;
 	position: fixed;
 	background-color: #00D4AD;
-	right: 0;
+	right: -230px;
 	top: 0;
 	width: 230px;
 	height: 2000px;
@@ -72,10 +71,14 @@ nav .menu{
 }
 .menu-content ul li a{
 	color: #fff;
+	display: inline-block;
+	width: 100%;
 }
 .menu-content .remove{
 	color: #fff;
 	float: right;
+	margin-top:-10px;
+	margin-right: -10px;
 	cursor: pointer;
 }
 
