@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>购物网站网页定位导航效果</title>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		body{
+			font-size: 12px;
+			line-height: 17px; 
+		}
+		li{
+			list-style: none;
+		}
+		/* ******************每楼样式******************* */
+		#content{
+			width: 800px;
+			margin: 0 auto;
+			padding: 20px;
+		}
+		#content h1{
+			color: #08b;
+			margin: 5px 0;
+		}
+
+		#content .item{
+			padding: 20px;
+			margin-bottom: 20px;
+			border: 1px dotted #08b;
+		}
+
+		#content .item h2{
+			font-size: 16px;
+			font-weight: bold;
+			border-bottom: 2px solid #08b;
+			margin-bottom: 10px;
+		}
+		/* *****************修改图片样式**************** */
+		#content .item li{
+			display: inline;
+			margin-right: 10px;
+		}
+		#content .item li a img{
+			width: 230px;
+			height: 230px;
+			border: none;
+		}
+
+		/* *******************导航栏样式******************* */
+		#menu{
+			position: fixed;
+			top: 100px;
+			left: 50%;
+			margin-left: 400px;
+			width: 80px;
+		}
+		#menu ul li a{
+			display: block;
+			margin: 5px 0;
+			font-size: 14px;
+			font-weight: bold;
+			color: #333;
+			width: 80px;
+			height: 50px;
+			line-height: 50px;
+			text-decoration: none;
+			text-align: center;
+		}
+
+		/* 设置鼠标在导航链接hover和获得焦点时的样式 */
+		#menu ul li a:hover,
+		#menu ul li a.current{
+			color: #fff;
+			background-color: #08b;
+		}
+
+	</style>
+
+
+</head>
+<body>
+	<div id="menu">
+		<ul>
+			<!-- 在HTML5中锚点定位用id标识 -->
+			<li><a href="#item1" class="current">1F 男装</a></li>
+			<li><a href="#item2">2F 女装</a></li>
+			<li><a href="#item3">3F 美妆</a></li>
+			<li><a href="#item4">4F 数码</a></li>
+			<li><a href="#item5">5F 母婴</a></li>
+		</ul>
+	</div>
+	<div id="content">
+		<h1>购物</h1>
+		<div id="item1" class="item">
+			<h2>1F 男装</h2>
+			<ul>
+				<li><a href="#"><img src="image/1F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="image/1F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="image/1F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="image/1F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="image/1F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="image/1F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="image/1F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="image/1F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="image/1F.jpg" alt=""></a></li>
+			</ul>
+		</div>
+		<div id="item2" class="item">
+			<h2>2F 女装</h2>
+			<ul>
+				<li><a href="#"><img src="image/2F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="image/2F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="image/2F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="image/2F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="image/2F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="image/2F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="image/2F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="image/2F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="image/2F.jpg" alt=""></a></li>
+			</ul>
+		</div>
+		<div id="item3" class="item">
+			<h2>3F 美妆</h2>
+			<ul>
+				<li><a href="#"><img src="image/3F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="image/3F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="image/3F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="image/3F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="image/3F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="image/3F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="image/3F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="image/3F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="image/3F.jpg" alt=""></a></li>
+			</ul>
+		</div>
+		<div id="item4" class="item">
+			<h2>4F 数码</h2>
+			<ul>
+				<li><a href="#"><img src="image/4F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="image/4F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="image/4F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="image/4F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="image/4F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="image/4F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="image/4F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="image/4F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="image/4F.jpg" alt=""></a></li>
+			</ul>
+		</div>
+		<div id="item5" class="item">
+			<h2>5F 母婴</h2>
+			<ul>
+				<li><a href="#"><img src="image/5F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="image/5F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="image/5F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="image/5F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="image/5F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="image/5F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="image/5F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="image/5F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="image/5F.jpg" alt=""></a></li>
+			</ul>
+		</div>
+	</div>
+	
+</body>
+</html>
