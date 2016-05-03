@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>购物网站网页定位导航效果</title>
+	<title>购物网站网页滚动条定位导航效果</title>
 	<style type="text/css">
 		*{
 			padding: 0;
@@ -76,9 +76,53 @@
 			color: #fff;
 			background-color: #08b;
 		}
-
 	</style>
 
+	<!-- <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script> -->
+	<script type="text/javascript" src="jquery_1.9.0/jquery.js"></script>
+	
+	<script>
+		$(document).ready(function(){
+			//滚动条发生滚动时
+			$(window).scroll(function(){
+				//
+				var top = $(document).scrollTop();
+				//console.log(top);
+				var menu = $("#menu");
+				var items = $("#content").find(".item");//获取所有的item类div对象
+				var currentId = ""; //代表当前所在楼（item）id
+				items.each(function(){
+					var m = $(this);
+					var itemTop = m.offset().top;//获取每个item的top
+					//console.log(itemTop);
+					//通过每个item的top值和滚动条top值对比就可以判别该定位到哪个item区了
+					if(top > itemTop-200 ){//当滚动条top值即将大于当前itemTop值(减少200像素)
+						currentId = "#" + m.attr("id");
+					}else{//当if条件已经获得后就直接跳出循环，不需要再继续遍历了，提供代码效率
+						return false;
+					}
+				});
+				/*
+					47  item1
+					843  item2
+ 					1639  item3
+					2435  item4
+					3231  item5
+					如当top = 2000时，经过上面的each遍历后 currentId = "#item3"。
+				*/
+				//经过上面的处理后，给相应楼层的a设置current，取消其他链接的current样式
+				var currentLink = menu.find(".current");
+				//如果获得的焦点id不为空且焦点当前item的id和滚动后id相同
+				if(currentId && currentLink.attr("href")!=currentId){
+					//清除已经存在的current样式
+					currentLink.removeClass("current");
+					//找到正确的链接 加上current样式
+					menu.find("[href="+currentId +"]").addClass("current");
+				}
+
+			})
+		})
+	</script>
 
 </head>
 <body>
